@@ -4,6 +4,7 @@ import { FormControl, MenuItem, Select, Card, CardContent } from "@material-ui/c
 import InfoBox from "./components/InfoBox";
 import Map from "./components/Map";
 import Table from "./components/Table";
+import {sortData} from './util';
 
 function App() {
                  //local state about countries
@@ -39,7 +40,9 @@ function App() {
                            value: country.countryInfo.iso2, //US, DZ, UK
                            id: country.countryInfo._id,
                          }));
-                         setTableData(data);
+
+                         const sortedData = sortData(data);
+                         setTableData(sortedData);
                          setCountries(countries);
                        });
                    };
