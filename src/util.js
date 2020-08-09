@@ -13,7 +13,7 @@ export const sortData = (data) => {
 export const buildChartData = (data, casesType = "cases") => {
   const chartData = [];
   let lastDataPoint;
-  if(data){
+  if (data) {
     for (let date in data[casesType]) {
       if (lastDataPoint) {
         const newDataPoint = {
@@ -34,11 +34,14 @@ export const options = {
     display: false,
   },
   elements: {
+    line: {
+      // fill: false,
+    },
     point: {
       radius: 0,
     },
   },
-  maintainAspectRatio: false,
+  maintainAspectRatio: true,
   tooltips: {
     mode: "index",
     intersect: false,
@@ -60,6 +63,9 @@ export const options = {
     ],
     yAxes: [
       {
+        //  stacked: true,
+      },
+      {
         gridLines: {
           display: false,
         },
@@ -74,7 +80,7 @@ export const options = {
 };
 
 //color dictionary (OBJECT)
-const casesTypeColors = {
+export const casesTypeColors = {
   cases: {
     hex: "#CC1034",
     multiplier: 800,
@@ -126,3 +132,8 @@ export const showDataOnMap = (data, casesType = "cases") =>
       </Popup>
     </Circle>
   ));
+
+export const prettyPrintStat = (stat) => {
+  return stat ? `+${numeral(stat).format("0.0a")}` : "+0";
+};
+  

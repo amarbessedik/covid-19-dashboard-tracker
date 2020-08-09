@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Table.module.css";
 import LineGraph from './LineGraph';
+import numeral from 'numeral';
 
 
 function Table({ countries }) {
@@ -20,7 +21,7 @@ function Table({ countries }) {
                 <LineGraph location={country} />
               </td>
               <td>
-                <strong>{cases}</strong>
+                <strong>{numeral(cases).format(0.0)}</strong>
               </td>
             </tr>
           );

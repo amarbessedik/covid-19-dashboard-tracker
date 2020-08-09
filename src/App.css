@@ -16,12 +16,12 @@ body{
   margin-bottom: 20px;
 }
 body{
-  position: relative;
+  /* position: relative; */
 }
 .app__dropdown{
-  position: absolute;
-  top: 780px;
-  left: -300px;
+  /* position: absolute; */
+  /* top: 780px; */
+  /* left: -300px; */
   background: white;
   width: 200px;
   height: 50px;

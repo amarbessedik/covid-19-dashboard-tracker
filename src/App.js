@@ -11,7 +11,7 @@ import InfoBox from "./components/InfoBox";
 import Map from "./components/Map";
 import Table from "./components/Table";
 import LineGraph from "./components/LineGraph";
-import { sortData } from "./util";
+import { sortData, prettyPrintStat } from "./util";
 import "leaflet/dist/leaflet.css";
 
 function App() {
@@ -28,6 +28,8 @@ function App() {
   const [mapZoom, setMapZoom] = useState(2);
   //map countries
   const [mapCountries, setMapCountries] = useState([]);
+  //cases types -> {cases, recovered, deaths}
+  const [casesType, setCasesType] = useState('cases');
 
   //This code runs once when the code is loaded and not again after
   useEffect(() => {
@@ -36,7 +38,7 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           setCountryInfo(data);
-          //  console.log("data >>>> ", data);
+            
         });
     };
     getTotalsWorldwide();
@@ -115,23 +117,31 @@ function App() {
         {/* 3 info boxes for different statistics */}
         <div className="info__stats">
           <InfoBox
+            onClick={(e) => setCasesType("cases")}
             title="Infected"
-            cases={countryInfo.todayCases}
-            total={countryInfo.cases}
+            cases={prettyPrintStat(countryInfo.todayCases)}
+            total={prettyPrintStat(countryInfo.cases)}
           />
           <InfoBox
+            onClick={(e) => setCasesType("recovered")}
             title="Recovered"
-            cases={countryInfo.todayRecovered}
-            total={countryInfo.recovered}
+            cases={prettyPrintStat(countryInfo.todayRecovered)}
+            total={prettyPrintStat(countryInfo.recovered)}
           />
           <InfoBox
+            onClick={(e) => setCasesType("deaths")}
             title="Fatalities"
-            cases={countryInfo.todayDeaths}
-            total={countryInfo.deaths}
+            cases={prettyPrintStat(countryInfo.todayDeaths)}
+            total={prettyPrintStat(countryInfo.deaths)}
           />
         </div>
         {/* map */}
-        <Map countries={mapCountries} center={mapCenter} zoom={mapZoom} />
+        <Map
+          casesType={casesType}
+          countries={mapCountries}
+          center={mapCenter}
+          zoom={mapZoom}
+        />
       </div>
       <div className="app__right">
         <Card>
