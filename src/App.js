@@ -12,6 +12,7 @@ import Map from "./components/Map";
 import Table from "./components/Table";
 import LineGraph from "./components/LineGraph";
 import { sortData } from "./util";
+import "leaflet/dist/leaflet.css";
 
 function App() {
   //local state about countries
@@ -22,6 +23,11 @@ function App() {
   const [countryInfo, setCountryInfo] = useState({});
   //Table data
   const [tableData, setTableData] = useState([]);
+  //Map center
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom, setMapZoom] = useState(2);
+  //map countries
+  const [mapCountries, setMapCountries] = useState([]);
 
   //This code runs once when the code is loaded and not again after
   useEffect(() => {
@@ -30,7 +36,7 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           setCountryInfo(data);
-          //  console.log("worldwideInfo >>>> ", countryInfo);
+          //  console.log("data >>>> ", data);
         });
     };
     getTotalsWorldwide();
@@ -50,6 +56,7 @@ function App() {
 
           const sortedData = sortData(data);
           setTableData(sortedData);
+          setMapCountries(data);
           setCountries(countries);
         });
     };
@@ -70,12 +77,15 @@ function App() {
       .then((data) => {
         setCountry(countryCode);
         setCountryInfo(data);
+        if (countryCode !== "worldwide")
+          setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        setMapZoom(4);
       });
   };
 
   return (
     <div className="app">
-      <div className="app_left">
+      <div className="app__left">
         <div className="app__header">
           {/* header -> title & select input dropdown*/}
           <h1>COVID-19 DASHBOARD TRACKER</h1>
@@ -121,18 +131,23 @@ function App() {
           />
         </div>
         {/* map */}
-        <Map />
+        <Map countries={mapCountries} center={mapCenter} zoom={mapZoom} />
       </div>
-      <Card className="app__right">
-        <CardContent>
-          {/* country table */}
-          <h3>Live Cases by Country</h3>
-          <Table countries={tableData} />
-          {/* graph */}
-          <h3>Worldwide New Cases</h3>
-          <LineGraph />
-        </CardContent>
-      </Card>
+      <div className="app__right">
+        <Card>
+          <CardContent>
+            {/* country table */}
+            <div className="app__right__table__header">
+              <h3>Live Cases by Country</h3>
+              <p>(Descending Order)</p>
+            </div>
+            <Table countries={tableData} />
+            {/* graph */}
+            <h3 className="app__right__graph">Worldwide Total Cases</h3>
+            <LineGraph height={220} width={300} />
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

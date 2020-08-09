@@ -1,16 +1,19 @@
-.info__box {
-    border: 1px solid #777;
-    padding: 10px;
-    width: 150px;
+.infoBox {
+    /* border: 1px solid rgb(190, 187, 187); */
+    padding: 5px;
+    width: 180px;
     border-radius: 5px;
     box-shadow: 0 0 25px 2px #bbb;
 }
-.infoBox__title{
-
+.infoBox__title, .infoBox__cases, .infoBox__total{
+  padding: 2px 0;
+  text-align: center;
 }
-.infoBox__cases{
 
-}
-.infoBox__total{
-
+@media (max-width: 700px){
+    .infoBox{
+        margin-bottom: 5px;
+        width: 100%;
+        padding: 0;
+    }
 }
