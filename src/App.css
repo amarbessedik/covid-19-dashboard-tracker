@@ -1,33 +1,43 @@
-* {
-  margin: 0;
-}
-body{
-  background: #f5f6fa;
+
+body, html{
+  background: rgb(253, 253, 253);
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 .app{
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  width: 90vw;
+  margin: 0 auto;
 }
 .app__header{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-body{
-  /* position: relative; */
+.app__header h1{
+  color: rgb(197, 194, 194);
+  font-size: 1.8rem;
 }
 .app__dropdown{
-  /* position: absolute; */
-  /* top: 780px; */
-  /* left: -300px; */
-  background: white;
-  width: 200px;
-  height: 50px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+.form__dropdown{
+  background: whitesmoke;
+  width: 300px;
+  height: 100%;
+  border-radius: 5px;
+}
+.form__dropdown:focus{
+  outline: none!important;
 }
 .app__left{
-  width: 60vw;
+  width: 55vw;
   /* border: 2px solid red; */
 }
 .app__right__table__header{
@@ -38,14 +48,26 @@ body{
   text-align: center;
 }
 .app__right{
-  /* border: 2px solid red; */
-  width: 35vw;
+  width: 30vw;
+  margin-top: 95px;
+}
+.app__right .MuiPaper-root{
+  /* border: 15px solid; */
+  box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
 }
 .info__stats{
-  padding: 10px;
+  padding: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.bg__image{
+  background: url("https://www.uib.no/sites/w3.uib.no/files/styles/content_main/public/media/corona_0.jpg?itok=jLNfb1Dc&timestamp=1582750728");
+  background-size: cover;
+  height: 320px;
+  border-radius: 5px;
+   box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width:990px){
@@ -60,10 +82,16 @@ body{
   .app{
     flex-direction: column;
   }
+  *{
+    font-size: 90%;
+  }
 }
 
 @media (max-width: 700px){
   .info__stats{
     flex-direction: column;
   }
+  .app__header h1{
+  font-size: 1.5rem;
+}
 }

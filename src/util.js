@@ -30,54 +30,55 @@ export const buildChartData = (data, casesType = "cases") => {
 
 //Graph display options
 export const options = {
-  legend: {
-    display: false,
-  },
-  elements: {
-    line: {
-      // fill: false,
-    },
-    point: {
-      radius: 0,
-    },
-  },
-  maintainAspectRatio: true,
-  tooltips: {
-    mode: "index",
-    intersect: false,
-    callbacks: {
-      label: function (tooltipItem, data) {
-        return numeral(tooltipItem.value).format("+0.0");
-      },
-    },
-  },
-  scales: {
-    xAxes: [
-      {
-        type: "time",
-        time: {
-          format: "MM/DD/YY",
-          tooltipFormat: "ll",
-        },
-      },
-    ],
-    yAxes: [
-      {
-        //  stacked: true,
-      },
-      {
-        gridLines: {
-          display: false,
-        },
-        ticks: {
-          callbacks: function (value, index, values) {
-            return numeral(value).format("0a");
-          },
-        },
-      },
-    ],
-  },
-};
+         legend: {
+           display: false,
+         },
+         elements: {
+           line: {
+            //  fill: false,
+           },
+           point: {
+             radius: 0,
+           },
+         },
+         maintainAspectRatio: false,
+         tooltips: {
+           mode: "index",
+           intersect: false,
+           callbacks: {
+             label: function (tooltipItem, data) {
+               return numeral(tooltipItem.value).format("+0.0");
+             },
+           },
+         },
+         scales: {
+           fontColor: "#f3f2f8",
+           xAxes: [
+             {
+               type: "time",
+               time: {
+                 format: "MM/DD/YY",
+                 tooltipFormat: "ll",
+               },
+             },
+           ],
+           yAxes: [
+             {
+               //  stacked: true,
+             },
+             {
+               gridLines: {
+                 display: false,
+               },
+               ticks: {
+                 callbacks: function (value, index, values) {
+                   return numeral(value).format("0a");
+                 },
+               },
+             },
+           ],
+         },
+       };
 
 //color dictionary (OBJECT)
 export const casesTypeColors = {
@@ -100,7 +101,7 @@ export const showDataOnMap = (data, casesType = "cases") =>
   data.map((country) => (
     <Circle
       center={[country.countryInfo.lat, country.countryInfo.long]}
-      fillOpacity={0.4}
+      fillOpacity={0.3}
       color={casesTypeColors[casesType].hex}
       fillColor={casesTypeColors[casesType].hex}
       radius={

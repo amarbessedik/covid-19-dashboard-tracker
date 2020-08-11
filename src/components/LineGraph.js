@@ -4,43 +4,31 @@ import { buildChartData, options } from "../util";
 // import styles from "./LineGraph.module.css";
 //buildChartDatasets
 
-const caseTypes = ['cases', 'recovered', 'deaths'];
-
-function LineGraph({height = 90, width = 200, location = 'all', casesType = "cases" }) {
+function LineGraph({
+  height = 220,
+  width = 360,
+  location = "all",
+  casesType = "cases",
+}) {
   const [data, setData] = useState({});
-  // const [datasets, setDatasets] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       await fetch(
-        `https://disease.sh/v3/covid-19/historical/${location}?lastdays=90`
+        `https://disease.sh/v3/covid-19/historical/${location}?lastdays=180`
       )
         .then((response) => {
           return response.json();
         })
         .then((data_json) => {
-          // let prepared_json = data_json.timeline? data_json.timeline : data_json;
-          // let chartDatasets = [];
-          
-          // for(let i = 0; i < caseTypes.length; i++){
-          //   //  setDatasets({...buildChartData(prepared_json, caseType)});
-          //   const tmp = buildChartData(prepared_json, caseTypes[i]);
-          //   chartDatasets.push(tmp);
-          // }
-
-          // setDatasets(chartDatasets);
-
-
           const chartData = data_json.timeline
-            ? buildChartData(data_json.timeline)
-            : buildChartData(data_json);
+            ? buildChartData(data_json.timeline, casesType)
+            : buildChartData(data_json, casesType);
           setData(chartData);
         });
     };
     fetchData();
   }, [casesType, location]);
-
-  // console.log("chartDatasets >>>> ", data);
 
   const _datasets = [
     {

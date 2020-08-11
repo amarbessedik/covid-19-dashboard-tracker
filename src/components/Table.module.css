@@ -12,7 +12,7 @@ tr{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
+    font-size: 12px;
 }
 th{
     text-transform: uppercase;
@@ -20,6 +20,8 @@ th{
     color: rgb(8, 201, 169);
 }
 td, th{
+    text-align: center; 
+    vertical-align: middle;
     padding: .5rem 1rem;
     border: none;
     align-self: center;

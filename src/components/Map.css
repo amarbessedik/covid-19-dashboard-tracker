@@ -1,11 +1,11 @@
 .map {
   height: 500px;
-  background: #fff;
+  /* background: rgb(22, 22, 22); */
   padding: 1rem;
   margin-bottom: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-top: 16px;
-  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
 }
 .map .leaflet-container {
   height: 100%;
