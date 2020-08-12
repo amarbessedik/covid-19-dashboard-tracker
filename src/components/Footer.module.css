@@ -1,0 +1,14 @@
+.footer{
+    background: rgb(22, 22, 22);
+    padding: 50px;
+    color: #777;
+    display: flex;
+
+}
+.footer__list{
+    flex: 1;
+}
+
+.class-temp{
+    color: rgba(251, 65, 65, 0.5);
+}

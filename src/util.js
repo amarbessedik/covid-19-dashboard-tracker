@@ -28,6 +28,28 @@ export const buildChartData = (data, casesType = "cases") => {
   return chartData;
 };
 
+//color dictionary (OBJECT)
+export const casesTypeColors = {
+         cases: {
+           hex: "#CC1034",
+           border: "#CC1034",
+           fill: "rgba(251, 65, 65, 0.7)",
+           multiplier: 800,
+         },
+         recovered: {
+           hex: "#7DD71D",
+           border: "#7DD71D",
+           fill: "rgba(125, 215, 29, 0.7)",
+           multiplier: 1200,
+         },
+         deaths: {
+           hex: "#FB4443",
+           border: "#FB4443",
+           fill: "rgba(251, 65, 65, 0.7)",
+           multiplier: 2000,
+         },
+       };
+
 //Graph display options
 export const options = {
          legend: {
@@ -80,24 +102,10 @@ export const options = {
          },
        };
 
-//color dictionary (OBJECT)
-export const casesTypeColors = {
-  cases: {
-    hex: "#CC1034",
-    multiplier: 800,
-  },
-  recovered: {
-    hex: "#7DD71D",
-    multiplier: 1200,
-  },
-  deaths: {
-    hex: "#FB4443",
-    multiplier: 2000,
-  },
-};
+
 
 //Draw circles on the map with interactive tooltips
-export const showDataOnMap = (data, casesType = "cases") =>
+export const showDataOnMap = (data, casesType) =>
   data.map((country) => (
     <Circle
       center={[country.countryInfo.lat, country.countryInfo.long]}
@@ -113,7 +121,7 @@ export const showDataOnMap = (data, casesType = "cases") =>
           <div
             className="popup__flag"
             style={{
-              backgroundImage: `url(${country.countryInfo.flag})`,
+              backgroundImage: `url(${country.countryInfo.flag})`, 
               //  backgroundSize: "cover",
               //  height: "25px",
               //  width: "35px",

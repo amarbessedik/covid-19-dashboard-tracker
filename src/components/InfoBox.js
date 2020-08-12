@@ -5,7 +5,7 @@ import {
   CardContent,
   Typography,
   CardActionArea,
-} from "@material-ui/core";
+} from "@material-ui/core"; 
 
 function InfoBox({ active, isRed, title, cases, total, ...props }) {
   return (

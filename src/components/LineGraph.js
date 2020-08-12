@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import { buildChartData, options } from "../util";
+import { buildChartData, options, casesTypeColors } from "../util";
 // import styles from "./LineGraph.module.css";
 //buildChartDatasets
 
@@ -8,7 +8,7 @@ function LineGraph({
   height = 220,
   width = 360,
   location = "all",
-  casesType = "cases",
+  casesType,
 }) {
   const [data, setData] = useState({});
 
@@ -33,8 +33,8 @@ function LineGraph({
   const _datasets = [
     {
       data: data,
-      backgroundColor: "rgba(204, 16, 52, 0.5)",
-      borderColor: "#CC1034",
+      backgroundColor: `${casesTypeColors[casesType].fill}`,
+      borderColor: `${casesTypeColors[casesType].border}`,
     },
   ];
 

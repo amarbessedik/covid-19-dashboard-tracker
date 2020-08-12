@@ -23,7 +23,7 @@ body, html{
   font-size: 1.8rem;
 }
 .app__dropdown{
-  padding: 25px;
+  padding: 5px;
   display: flex;
   justify-content: center;
 }
@@ -65,7 +65,7 @@ body, html{
 .bg__image{
   background: url("https://www.uib.no/sites/w3.uib.no/files/styles/content_main/public/media/corona_0.jpg?itok=jLNfb1Dc&timestamp=1582750728");
   background-size: cover;
-  height: 320px;
+  min-height: 320px;
   border-radius: 5px;
    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.5);
 }

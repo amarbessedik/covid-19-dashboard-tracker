@@ -1,9 +1,9 @@
 .infoBox {
   box-sizing: border-box !important;
   border-radius: 5px;
-  box-shadow: 0 0 25px 2px #bbb;
+  box-shadow: 0 0 25px 2px #bbb!important;
   flex: 1;
-  background-color: #212529ce !important;
+  background-color: #2766a5ce !important;
 }
 
 .infoBox:not(:last-child) {
@@ -13,23 +13,23 @@
 .infoBox__cases,
 .infoBox__total {
   text-transform: uppercase;
-   letter-spacing: 2px;
+   letter-spacing: 1px;
   padding: 0;
-  margin: 3px;
+  margin: 1px;
   text-align: center;
-   color: rgb(197, 194, 194) !important;
+   color: rgb(220, 223, 228) !important;
 }
 
 .infoBox__cases {
   color: #fd1616 !important;
-  font-weight: 400;
-  font-size: 2.2rem;
+  font-weight: 300!important;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.infoBox__total {
+.infoBox__total, .infoBox__title {
   color: #6c757d;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-size: 1rem !important;
   margin-bottom: 15px !important;
 }
@@ -46,6 +46,9 @@
   .infoBox {
     margin-bottom: 5px;
     width: 100%;
-    padding: 0;
+    height: 75%;
   }
+  .infoBox:last-child {
+  margin-left: -15px!important;
+}
 }
