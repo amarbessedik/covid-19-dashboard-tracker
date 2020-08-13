@@ -1,16 +1,18 @@
 
 body, html{
-  background: rgb(253, 253, 253);
+  background: #efeff0;
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
+  width: 100vw!important;
+  overflow-x: hidden;
 }
 .app{
   display: flex;
   justify-content: space-around;
   padding: 20px;
   width: 90vw;
-  margin: 0 auto;
+  margin: auto;
 }
 .app__header{
   display: flex;
@@ -19,7 +21,7 @@ body, html{
   margin-bottom: 20px;
 }
 .app__header h1{
-  color: rgb(197, 194, 194);
+  color: rgb(18, 197, 182);
   font-size: 1.8rem;
 }
 .app__dropdown{
@@ -68,6 +70,12 @@ body, html{
   min-height: 320px;
   border-radius: 5px;
    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.5);
+}
+
+.news{
+  width: 90vw;
+  margin: auto;
+  /* border: 1px solid ; */
 }
 
 @media (max-width:990px){

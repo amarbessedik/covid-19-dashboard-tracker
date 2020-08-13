@@ -8,27 +8,42 @@
   box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
 }
 .map .leaflet-container {
-  height: 100%;
+  height: 100%; 
 }
-
+.popup__header{
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  margin-bottom: 10px;
+}
 .popup__flag {
-  height: 50px;
-  width: 70px;
+  height: 25px;
+  width: 30px;
   background-size: cover;
   background-position: center;
   border-radius: 6px;
-  margin: auto;
+  /* margin: auto; */
   box-shadow: 0 0 2px 1px #ccc;
+  margin-right: 10px;
 }
 
 .popup__name{
+  /* flex: 1; */
    font-size: 18px;
    font-weight: bold;
    color: #555;
-   text-align: center;
-   padding: 5px 0 0;
-   border-bottom: 1px solid;
+   /* border-bottom: 1px solid; */
+   align-self: center;
 }
+
+.date__updated{
+  text-align: center;
+  color: #999;
+  border-bottom: 1px solid #aaa;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
 .popup__confirmed, .popup__recovered, .popup__fatalities{
     font-size: 14px;
     margin-top: 5px;
