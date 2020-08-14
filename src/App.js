@@ -24,7 +24,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   //Track which country is selected
   const [country, setCountry] = useState("worldwide");
-  //Country info 
+  //Country info
   const [countryInfo, setCountryInfo] = useState({});
   //Table data
   const [tableData, setTableData] = useState([]);
@@ -88,9 +88,9 @@ function App() {
         setMapZoom(4);
       });
   };
-  
+
   return (
-    <>
+    <div className="container">
       <Navbar />
       <div className="app">
         <div className="app__left">
@@ -100,24 +100,24 @@ function App() {
           <div className="bg__image">
             <div className="info__stats">
               <InfoBox
-                isRed={true}
                 active={casesType === "cases"}
+                isBlue={true}
                 onClick={(e) => setCasesType("cases")}
                 title="Infected"
                 cases={prettyPrintStat(countryInfo.todayCases)}
                 total={prettyPrintStat(countryInfo.cases)}
               />
               <InfoBox
-                isRed={false}
                 active={casesType === "recovered"}
+                isGreen={true}
                 onClick={(e) => setCasesType("recovered")}
                 title="Recovered"
                 cases={prettyPrintStat(countryInfo.todayRecovered)}
                 total={prettyPrintStat(countryInfo.recovered)}
               />
               <InfoBox
-                isRed={true}
                 active={casesType === "deaths"}
+                isRed={true}
                 onClick={(e) => setCasesType("deaths")}
                 title="Fatalities"
                 cases={prettyPrintStat(countryInfo.todayDeaths)}
@@ -182,7 +182,7 @@ function App() {
         <News />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

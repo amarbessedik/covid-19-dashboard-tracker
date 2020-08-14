@@ -30,8 +30,8 @@ function News() {
 
     return (
         <div className={styles.article__list}>
-            {newsArticles.map(article =>(
-                <Article article={article}/>
+            {newsArticles.map((article, i) =>(
+                <Article key={i} article={article}/>
             ))}
         </div>
     )

@@ -1,9 +1,10 @@
 .infoBox {
   box-sizing: border-box !important;
   border-radius: 5px;
-  box-shadow: 0 0 25px 2px #bbb!important;
+  /* box-shadow: 0 0 25px 2px #bbb!important; */
   flex: 1;
-  background-color: #2766a5ce !important;
+  background-color: rgba(18, 197, 182, 0.38) !important;
+  /* border-top: 10px solid blue; */
 }
 
 .infoBox:not(:last-child) {
@@ -13,35 +14,60 @@
 .infoBox__cases,
 .infoBox__total {
   text-transform: uppercase;
-   letter-spacing: 1px;
+  letter-spacing: 1px;
   padding: 0;
   margin: 1px;
   text-align: center;
-   color: rgb(220, 223, 228) !important;
+  color: #fff !important;
+  font-weight: bold !important;
 }
 
 .infoBox__cases {
-  color: #fd1616 !important;
-  font-weight: 300!important;
+  color: #ca0f0f !important;
+  background: #fff;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.infoBox__total, .infoBox__title {
+.infoBox__total,
+.infoBox__title {
   color: #6c757d;
-  font-weight: 300 !important;
   font-size: 1rem !important;
   margin-bottom: 15px !important;
+  text-shadow: -1px -1px 5px rgba(0, 0, 0, 0.59) !important;
 }
-.infoBox__selected{
-  border-top: 10px solid greenyellow !important;
+
+.infoBox__red {
+  border-top: 15px solid #f32c2c !important;
 }
-.infoBox__red{
- border-top: 10px solid #f32c2c !important;
+.infoBox__green {
+  border-top: 15px solid rgb(5, 192, 5) !important;
+  
 }
-.infoBox__green{
-  color: greenyellow !important;
+.infoBox__blue {
+  border-top: 15px solid rgb(13, 47, 241) !important;
 }
+.red{
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  background: white;
+}
+
+.blue{
+  font-size: 2rem;
+  color: blue;
+  text-align: center;
+  background: white;
+}
+
+.green{
+  font-size: 2rem;
+  color: rgb(7, 175, 7);
+  text-align: center;
+  background: white;
+}
+
 @media (max-width: 700px) {
   .infoBox {
     margin-bottom: 5px;
@@ -49,6 +75,6 @@
     height: 75%;
   }
   .infoBox:last-child {
-  margin-left: -15px!important;
-}
+    margin-left: -15px !important;
+  }
 }

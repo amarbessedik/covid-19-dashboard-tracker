@@ -1,0 +1,18 @@
+.news__banner {
+  background-color: #20232a;
+  color: rgb(18, 197, 182);
+  font-size: 3rem;
+  width: 100vw;
+  padding: 35px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 25px;
+  margin-top: -10px;
+}
+
+.news__banner h5{
+  margin: 0;
+  text-align: center;
+}
