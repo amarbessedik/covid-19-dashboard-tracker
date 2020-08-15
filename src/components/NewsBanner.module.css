@@ -6,7 +6,7 @@
   padding: 35px 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -2px;
   z-index: 1;
   margin-bottom: 25px;
   margin-top: -10px;

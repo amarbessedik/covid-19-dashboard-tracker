@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { Share } from "@material-ui/icons";
 
 function Article({ article: { urlToImage, url, description, title } }) {
   return (
@@ -28,13 +29,23 @@ function Article({ article: { urlToImage, url, description, title } }) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{ display: "flex", justifyContent: "space-around" }}>
-        <Button size="small" color="primary">
-          <a href={url}>Learn More</a>
+      <CardActions
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "baseline",
+        }}
+      >
+        <Button variant="outlined" size="small" color="primary">
+          <a style={{ textDecoration: "none" }} href={url} target="_blank">
+            Learn More
+          </a>
         </Button>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+        {
+          <a style={{ textDecoration: "none" }} href={url} target="_blank">
+            <Share variant = 'outlined' size="small" style={{padding: '0'}}/>
+          </a>
+        }
       </CardActions>
     </Card>
   );

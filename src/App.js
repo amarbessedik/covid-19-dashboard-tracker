@@ -18,6 +18,7 @@ import { sortData, prettyPrintStat } from "./util";
 import "leaflet/dist/leaflet.css";
 import Navbar from "./components/Navbar";
 import NewsBanner from "./components/NewsBanner";
+import LineGraphButtons from "./components/LineGraphButtons";
 
 function App() {
   //local state about countries
@@ -161,7 +162,8 @@ function App() {
           <Card>
             <CardContent>
               {/* graph */}
-              <h3 className="app__right__graph">Worldwide Total {casesType}</h3>
+              <h3 style={{textTransform: 'uppercase'}} className="app__right__graph">Worldwide Total {casesType}</h3>
+              <LineGraphButtons countryInfo={countryInfo} setCasesType={setCasesType} casesType={casesType}/>
               {country === "worldwide" ? (
                 <LineGraph casesType={casesType} />
               ) : (
@@ -169,7 +171,7 @@ function App() {
               )}
               {/* country table */}
               <div className="app__right__table__header">
-                <h3>Live Cases by Country</h3>
+                <h3 style={{textTransform: 'uppercase'}}>Live Cases by Country</h3>
                 <p>(Descending Order)</p>
               </div>
               <Table casesType={casesType} countries={tableData} />

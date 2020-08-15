@@ -3,7 +3,7 @@ import styles from './News.module.css';
 import Article from './Article';
 
 
-//newsapi.org
+//newsapi.org 
 const API_KEY = `69a95ac9df454ecabc9968c21fbe901c`;
 const url =
   `http://newsapi.org/v2/everything?` +

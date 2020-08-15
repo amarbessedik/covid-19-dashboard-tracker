@@ -1,10 +1,9 @@
 .infoBox {
   box-sizing: border-box !important;
   border-radius: 5px;
-  /* box-shadow: 0 0 25px 2px #bbb!important; */
   flex: 1;
-  background-color: rgba(18, 197, 182, 0.38) !important;
-  /* border-top: 10px solid blue; */
+  background-color: rgba(0,0,0, 0.38) !important;
+  border-top: 15px solid transparent;
 }
 
 .infoBox:not(:last-child) {
@@ -15,11 +14,12 @@
 .infoBox__total {
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 0;
-  margin: 1px;
   text-align: center;
   color: #fff !important;
-  font-weight: bold !important;
+}
+
+.MuiCardContent-root h2{
+  padding: 0 !important;
 }
 
 .infoBox__cases {
@@ -31,18 +31,16 @@
 
 .infoBox__total,
 .infoBox__title {
-  color: #6c757d;
   font-size: 1rem !important;
-  margin-bottom: 15px !important;
-  text-shadow: -1px -1px 5px rgba(0, 0, 0, 0.59) !important;
+  text-shadow: 0 0 10px 5px rgba(0, 0, 0,1) !important;
+  font-weight: 400 !important;
 }
 
 .infoBox__red {
   border-top: 15px solid #f32c2c !important;
 }
 .infoBox__green {
-  border-top: 15px solid rgb(5, 192, 5) !important;
-  
+  border-top: 15px solid rgb(61, 235, 191) !important;
 }
 .infoBox__blue {
   border-top: 15px solid rgb(13, 47, 241) !important;
@@ -63,7 +61,7 @@
 
 .green{
   font-size: 2rem;
-  color: rgb(7, 175, 7);
+  color: rgb(61, 235, 191);
   text-align: center;
   background: white;
 }

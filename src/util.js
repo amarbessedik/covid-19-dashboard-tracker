@@ -30,25 +30,25 @@ export const buildChartData = (data, casesType = "cases") => {
 
 //color dictionary (OBJECT)
 export const casesTypeColors = {
-  cases: {
-    hex: "#CC1034",
-    border: "#CC1034",
-    fill: "rgba(251, 65, 65, 0.7)",
-    multiplier: 800,
-  },
-  recovered: {
-    hex: "#7DD71D",
-    border: "#7DD71D",
-    fill: "rgba(125, 215, 29, 0.7)",
-    multiplier: 1200,
-  },
-  deaths: {
-    hex: "#FB4443",
-    border: "#FB4443",
-    fill: "rgba(251, 65, 65, 0.7)",
-    multiplier: 2000,
-  },
-};
+         cases: {
+           hex: "#062BD1",
+           border: "#CC1034",
+           fill: "rgba(3, 22, 197, 0.5)",
+           multiplier: 1000,
+         },
+         recovered: {
+           hex: "rgb(61, 235, 191)",
+           border: "#7DD71D",
+           fill: "rgba(61, 235, 191, 0.5)",
+           multiplier: 1000,
+         },
+         deaths: {
+           hex: "#FB4443",
+           border: "#FB4443",
+           fill: "rgba(251, 65, 65, 0.5)",
+           multiplier: 1500,
+         },
+       };
 
 //Graph display options
 export const options = {
@@ -107,9 +107,9 @@ export const showDataOnMap = (data, casesType) =>
          data.map((country) => (
            <Circle
              center={[country.countryInfo.lat, country.countryInfo.long]}
-             fillOpacity={0.3}
-             color={casesTypeColors[casesType].hex}
-             fillColor={casesTypeColors[casesType].hex}
+             fillOpacity={0.5}
+             color={casesTypeColors[casesType].border}
+             fillColor={casesTypeColors[casesType].fill}
              radius={
                Math.sqrt(country[casesType]) *
                casesTypeColors[casesType].multiplier

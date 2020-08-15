@@ -1,0 +1,17 @@
+.lineGraphButton {
+  /* box-sizing: border-box !important;
+  border-radius: 5px;
+  margin: 0 10px !important;
+  background-color: rgba(0,0,0, 0.38) !important;
+  background: 1px solid blue!important; */
+}
+
+.blue {
+  color: blue !important;
+}
+.green {
+  color: rgb(20, 228, 176) !important;
+}
+.red {
+  color: red !important;
+}
