@@ -37,13 +37,23 @@ function Article({ article: { urlToImage, url, description, title } }) {
         }}
       >
         <Button variant="outlined" size="small" color="primary">
-          <a style={{ textDecoration: "none" }} href={url} target="_blank">
+          <a
+            style={{ textDecoration: "none" }}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Learn More
           </a>
         </Button>
         {
-          <a style={{ textDecoration: "none" }} href={url} target="_blank">
-            <Share variant = 'outlined' size="small" style={{padding: '0'}}/>
+          <a
+            style={{ textDecoration: "none" }}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Share variant="outlined" size="small" style={{ padding: "0" }} />
           </a>
         }
       </CardActions>
