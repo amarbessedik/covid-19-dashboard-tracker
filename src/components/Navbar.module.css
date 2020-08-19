@@ -11,14 +11,20 @@
 
 .logo{
     flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: rgb(18, 197, 182);
+    min-width: fit-content;
 }
 
 .logo img{
-    height: 70px;
+    height: 100px;
+}
+span{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .links{

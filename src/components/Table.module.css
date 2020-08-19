@@ -15,6 +15,10 @@ tr {
   align-items: center;
   font-size: 12px;
   width: 100%;
+  padding: 5px 0;
+}
+tr td:first-child, th:first-child{
+  margin-right: 15px;
 }
 th {
   text-transform: uppercase;
@@ -23,25 +27,25 @@ th {
 }
 td,
 th {
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
-  padding: 0.5rem 1rem;
   border: none;
-  /* align-self: center; */
   display: flex;
   flex-wrap: nowrap;
   flex: 1;
-  /* justify-content: flex-start; */
   align-items: center;
 }
 .flag {
   display: flex;
-  /* justify-content: space-between; */
+  /* border: 1px solid red; */
+  width: 300px;
 }
+
 .flag span {
-  /* display: block; */
   margin-left: 10px;
   text-align: left;
+    font-size: 12px !important;
+    font-weight: normal !important;
 }
 .flag img {
   height: 20px;
@@ -49,9 +53,9 @@ th {
   border-radius: 2px;
 }
 tr:nth-of-type(odd) {
-  background: #f3f2f8;
+  background:rgba(8, 201, 169, 0.1);
 }
 
-tr:first-child {
+tr:first-child{
   background: rgba(13, 230, 194, 0.192);
 }

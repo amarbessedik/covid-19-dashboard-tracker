@@ -12,6 +12,7 @@ import InfoBox from "./components/InfoBox";
 import News from "./components/News";
 import Map from "./components/Map";
 import Table from "./components/Table";
+// import MuiVirtualizedTable from "./components/Table2";
 import LineGraph from "./components/LineGraph";
 import Footer from "./components/Footer";
 import { sortData, prettyPrintStat } from "./util";
@@ -162,8 +163,17 @@ function App() {
           <Card>
             <CardContent>
               {/* graph */}
-              <h3 style={{textTransform: 'uppercase'}} className="app__right__graph">Worldwide Total {casesType}</h3>
-              <LineGraphButtons countryInfo={countryInfo} setCasesType={setCasesType} casesType={casesType}/>
+              <h3
+                style={{ textTransform: "uppercase" }}
+                className="app__right__graph"
+              >
+                Worldwide Total {casesType}
+              </h3>
+              <LineGraphButtons
+                countryInfo={countryInfo}
+                setCasesType={setCasesType}
+                casesType={casesType}
+              />
               {country === "worldwide" ? (
                 <LineGraph casesType={casesType} />
               ) : (
@@ -171,10 +181,13 @@ function App() {
               )}
               {/* country table */}
               <div className="app__right__table__header">
-                <h3 style={{textTransform: 'uppercase'}}>Live Cases by Country</h3>
+                <h3 style={{ textTransform: "uppercase" }}>
+                  Live Cases by Country
+                </h3>
                 <p>(Descending Order)</p>
               </div>
               <Table casesType={casesType} countries={tableData} />
+              
             </CardContent>
           </Card>
         </div>

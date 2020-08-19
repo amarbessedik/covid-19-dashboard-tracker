@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-// import logo from '../images/Covid19_logo.png';
+import logo from '../images/logo.png';
 
 function Navbar() {
   return (
     <header className={styles.navbar}>
       <div className={styles.logo}>
-        <h3>COVID19 GLOBAL TRACKER</h3>
+        {/* <h3>COVID19 GLOBAL TRACKER</h3> */}
+        <img src={logo} alt='logo'/><span>COVID-19</span>
       </div>
       <ul className={styles.links}>
         <li>

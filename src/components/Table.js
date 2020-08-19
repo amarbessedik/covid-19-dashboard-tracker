@@ -29,11 +29,13 @@ function Table({ countries }) {
                   {" "}
                   <img src={flag} alt="flag" /> <span>{country}</span>
                 </td>
-                <td>{active}</td>
-                <td>{deaths}</td>
-                <td>{recovered}</td>
+                <td>{numeral(active).format(0.0)}</td>
+                <td>{numeral(deaths).format(0.0)}</td>
+                <td>{numeral(recovered).format(0.0)}</td>
                 <td>
-                  <strong>{numeral(cases).format(0.0)}</strong>
+                  <strong style={{ color: "rgb(8, 201, 169)" }}>
+                    {numeral(cases).format(0.0)}
+                  </strong>
                 </td>
               </tr>
             );
