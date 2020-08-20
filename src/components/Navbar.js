@@ -6,8 +6,12 @@ function Navbar() {
   return (
     <header className={styles.navbar}>
       <div className={styles.logo}>
-        {/* <h3>COVID19 GLOBAL TRACKER</h3> */}
-        <img src={logo} alt='logo'/><span>COVID-19</span>
+        <img src={logo} alt="logo" />
+        <div className={styles.logo__text}>
+          <span>COVID-19</span>
+          <span>GLOBAL</span>
+          <span>TRACKER</span>
+        </div>
       </div>
       <ul className={styles.links}>
         <li>

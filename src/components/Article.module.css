@@ -1,8 +1,5 @@
 .card{
-    /* width: 29vw; */
-    width: 40vw;
-    /* min-width: 600px; */
-    margin: 15px;
+    width: 97%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

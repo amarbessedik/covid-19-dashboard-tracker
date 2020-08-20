@@ -9,14 +9,14 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Share } from "@material-ui/icons";
 
-function Article({ article: { urlToImage, url, description, title } }) {
+function Article({height = 150, article: { urlToImage, url, description, title } }) {
   return (
     <Card className={styles.card}>
       <CardActionArea>
         <CardMedia
           component="img"
           alt="News Article"
-          height="300"
+          height={height}
           image={urlToImage}
           title="Contemplative Reptile"
         />

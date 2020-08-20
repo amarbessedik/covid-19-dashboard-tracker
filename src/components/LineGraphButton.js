@@ -27,7 +27,7 @@ function LineGraphButton({
       isGreen={isGreen}
       isBlue={isBlue}
       onClick={props.onClick}
-      className={`
+      className={` ${styles.lineGraphButton}
                    ${
                      active &&
                      ((isBlue && styles.blue) ||
@@ -35,7 +35,7 @@ function LineGraphButton({
                        (isRed && styles.red))
                    }`}
     >
-      {title}
+      <span style={{fontSize: '12px'}}>{title}</span>
     </Button>
   );
 }
