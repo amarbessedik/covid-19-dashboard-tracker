@@ -1,0 +1,29 @@
+.sidebarArticle__container {
+  display: flex;
+}
+
+.sidebarArticle__content {
+  flex: 4;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebarArticle__content h4{
+  color: rgb(18, 197, 182);
+  margin: 0;
+}   
+.sidebarArticle__content p{
+  font-size: 90%;
+}    
+.sidebarArticle__thumbnail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebarArticle__thumbnail img {
+  margin: 3px;
+  height: 76px;
+  width: 76px;
+  border-radius: 5px;
+  overflow: hidden;
+}

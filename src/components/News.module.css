@@ -1,7 +1,5 @@
 .news__container {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   width: 90vw;
   margin: auto;
 }
@@ -10,6 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 .featured__article h1 {
   margin: auto;
@@ -18,16 +17,32 @@
   color: rgb(6, 199, 183);
   font-size: 2.5rem;
 }
-.featured__article p{
-   margin: auto;
-   color: #777;
+.featured__article p {
+  margin: auto;
+  color: #777;
 }
-.article__list {
+
+.sidebar__container {
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #20232a;
   width: 30vw;
-  height: 100vh;
+  text-align: left;
+  border-radius: 5px;  
+   box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
+}
+
+.article__list {
+  height: 105vh;
   overflow-y: scroll;
 }
 .sidebar__article {
   display: flex;
   justify-content: center;
+  background: #20232a;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  color: rgb(214, 211, 211);
+  cursor: pointer;
 }

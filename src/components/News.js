@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./News.module.css";
 import Article from "./Article";
+import SidebarArticle from "./SidebarArticle";
 
 //newsapi.org
 const API_KEY = `69a95ac9df454ecabc9968c21fbe901c`;
@@ -39,32 +40,44 @@ function News() {
 
         {newsArticles.length ? (
           <p>{newsArticles[featuredNewsArticle].author}</p>
-        ) : (
-          "Uknown"
-        )}
-           <p style={{marginBottom: '25px'}}>{new Date().toLocaleDateString()}</p>
+        ) : null}
+        <p style={{ marginBottom: "25px" }}>
+          {new Date().toLocaleDateString()}
+        </p>
 
         {newsArticles.length ? (
-          <Article height={600} article={newsArticles[featuredNewsArticle]} />
+          <Article height={570} article={newsArticles[featuredNewsArticle]} />
         ) : null}
       </div>
-      <div style={{ textAlign: "center", textTransform: "uppercase" }}>
-        <h3 style={{margin: '50px 0', color: '#777', textTransform: 'uppercase'}}>Discover News Article List</h3>
-        <div className={styles.article__list}>
-          {
-          newsArticles.map((article, i) => {
-              if(i !== featuredNewsArticle){
-                  return <div
+      <div style={{ textAlign: "left" }}>
+        <h3
+          style={{
+            margin: "50px 0",
+            color: "#777",
+            textTransform: "uppercase",
+          }}
+        >
+          Discover News Article List
+        </h3>
+        <div className={styles.sidebar__container}>
+          <div className={styles.article__list}>
+            {newsArticles.map((article, i) => {
+              if (i !== featuredNewsArticle) {
+                return (
+                  <div
+                    key={i}
                     className={styles.sidebar__article}
                     onClick={() => {
                       handleClick(i);
                     }}
                   >
-                    <Article key={i} article={article} />
-                  </div>;
+                    <SidebarArticle article={article} />
+                  </div>
+                );
               }
-                return null;
-          })}
+              return null;
+            })}
+          </div>
         </div>
       </div>
     </div>
