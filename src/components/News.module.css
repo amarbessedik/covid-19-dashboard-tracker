@@ -4,11 +4,10 @@
   margin: auto;
 }
 .featured__article {
-  width: 60vw;
+  width: 55vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 .featured__article h1 {
   margin: auto;
@@ -25,12 +24,36 @@
 .sidebar__container {
   box-sizing: border-box;
   padding: 15px;
-  border: 1px solid #20232a;
-  width: 30vw;
+  /* border: 1px solid #20232a; */
+  width: 35vw;
   text-align: left;
-  border-radius: 5px;  
-   box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
 }
+
+  .article__list::-webkit-scrollbar {
+    width: 8px;
+    transition: all 1s ease-in-out;
+  }
+
+  .article__list::-webkit-scrollbar-track {
+    border-radius: 2px;
+  }
+
+  .article__list::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px rgba(153, 152, 152, 0.2);
+    -webkit-box-shadow: inset 0 0 6px rgba(110, 109, 109, 0.534);
+    transition: all 1s ease-in-out;
+  }
+
+  .article__list:hover::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px rgba(228, 225, 225, 0.7);
+    -webkit-box-shadow: inset 0 0 6px rgba(206, 203, 203, 0.7);
+    background: rgb(66, 66, 66);
+    transition: all 1s ease-in-out;
+  }
 
 .article__list {
   height: 105vh;
@@ -45,4 +68,56 @@
   padding: 5px;
   color: rgb(214, 211, 211);
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .news__container {
+    flex-direction: column;
+  }
+  .featured__article {
+    order: 2;
+    width: 100%;
+  }
+  .sidebar__container {
+    order: 1;
+    width: 97%;
+    height: fit-content;
+    border: none;
+    box-shadow: none;
+    /* border: 1px solid #ccc; */
+  }
+  .article__list{
+      display: flex;
+      align-items: flex-start;
+      height: fit-content;
+      overflow-y: hidden;
+  }
+
+  .article__list::-webkit-scrollbar {
+    height: 8px;
+    /* transition: all 1s ease-in-out; */
+}
+
+.article__list::-webkit-scrollbar-track {
+    border-radius: 2px;
+}
+
+.article__list::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    /* transition: all 1s ease-in-out; */
+}
+
+.article__list:hover::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
+    background: rgb(66, 66, 66);
+    /* transition: all 1s ease-in-out; */
+}
+
+  .sidebar__article {
+      /* width: 100%; */
+  }
 }

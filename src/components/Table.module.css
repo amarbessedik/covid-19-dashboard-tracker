@@ -8,27 +8,35 @@ table {
   /* padding: 10px; */
 }
 .table {
-  overflow-y: scroll;
-  overflow-x: scroll;
+  overflow: auto;
   max-height: 340px;
   border-radius: 5px;
   
 }
 
 .table::-webkit-scrollbar {
-    width: 15px;
-}
+    width: 10px;
+    transition: all 1s ease-in-out;
+  }
 
-.table::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(196, 250, 241, 0.384); 
+  .table::-webkit-scrollbar-track {
     border-radius: 2px;
-}
+  }
 
-.table::-webkit-scrollbar-thumb {
+  .table::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
-    background: rgb(7, 228, 191);
-}
+    box-shadow: inset 0 0 6px rgba(153, 152, 152, 0.2);
+    -webkit-box-shadow: inset 0 0 6px rgba(202, 198, 198, 0.404);
+    transition: all 1s ease-in-out;
+  }
+
+  .table:hover::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px rgba(228, 225, 225, 0.7);
+    -webkit-box-shadow: inset 0 0 6px rgba(206, 203, 203, 0.7);
+    background: rgb(66, 66, 66);
+    transition: all 1s ease-in-out;
+  }
 
 .table__outer__container{
  padding: 10px;

@@ -15,16 +15,19 @@ function Navbar() {
       </div>
       <ul className={styles.links}>
         <li>
-          <a href="/">link</a>
+          <a href="/">Map</a>
         </li>
         <li>
-          <a href="/">link</a>
+          <a href="/">Cases By Country</a>
         </li>
         <li>
-          <a href="/">link</a>
+          <a href="/">Worldwide Line Graph</a>
+        </li>
+        <li>
+          <a href="/">Coronavirus News</a>
         </li>
       </ul>
-      <div className={styles.search__bar}>
+      {/* <div className={styles.search__bar}>
         <input
           type="text"
           name="searchbar"
@@ -32,7 +35,7 @@ function Navbar() {
           placeholder="Search latest news on coronavirus"
         />
         <button type="button">Search</button>
-      </div>
+      </div> */}
     </header>
   );
 }

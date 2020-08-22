@@ -12,13 +12,13 @@
 .logo{
     flex: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
     color: rgb(109, 240, 229)!important;
     min-width: fit-content;
     cursor: pointer;
     text-decoration: none!important;
+    /* border: 1px solid red; */
 }
 .logo span{
     display: block!important;
@@ -36,49 +36,31 @@
 
 .links{
     display: flex;
-    flex: 4;
-    justify-content: center;
+    flex: 5;
     align-items: center;
     height: 100%;
     color: #777;
     list-style: none;
+    font-size: .85rem;
+    /* border: 1px solid red; */
 }
 .links li{
-    
-    margin: 0 20px;
+    margin: 0 15px;
+    /* border: 1px solid red; */
+    height:100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
 }
 .links li a{
     text-decoration: none;
     color: rgb(18, 197, 182);
     text-transform: uppercase;
 }
-.search__bar{
-    display: flex;
-    flex: 3;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #999;
+.links li:hover, .logo:hover{
+    background: rgba(18, 197, 182, 0.15);
 }
-.search__input{
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    width: 50%;
-    padding: 10px;
-}
-.search__input::placeholder{
-    color: rgba(8, 179, 150, 0.63);
-}
-.search__bar button{
-    margin-left: 20px;
-     border-radius: 10px;
-    outline: none;
-    border: none;
-    padding: 10px 20px;
-    background: rgb(18, 216, 183);
-    cursor: pointer;
-}
+
 
 
 

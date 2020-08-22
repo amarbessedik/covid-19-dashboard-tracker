@@ -1,12 +1,12 @@
 .lineGraphButton {
-  background-color: rgba(15, 148, 104, 0.096) !important;
+  /* background-color: rgba(15, 148, 104, 0.096) !important; */
 }
 
 .blue {
   color: blue !important;
 }
 .green {
-  color: rgb(20, 228, 176) !important;
+  color: rgb(12, 201, 153) !important;
 }
 .red {
   color: red !important;

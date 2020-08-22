@@ -97,7 +97,7 @@ function App() {
       <div className="app">
         <div className="app__left">
           <div className="app__header">
-            <h1>COVID-19 DASHBOARD TRACKER</h1>
+            {/* <h1>COVID-19 DASHBOARD TRACKER</h1> */}
           </div>
           <div className="bg__image">
             <div className="info__stats">
