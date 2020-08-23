@@ -159,11 +159,11 @@ function App() {
             casesType={casesType}
           />
         </div>
-        <div className="app__right">
+        <div id='graph' className="app__right">
           <Card>
             <CardContent>
               {/* graph */}
-              <h3 id='graph'
+              <h3 id='_graph'
                 style={{ textTransform: "uppercase" }}
                 className="app__right__graph"
               >
@@ -185,6 +185,9 @@ function App() {
                   Live Cases by Country
                 </h3>
                 <p>(Descending Order)</p>
+                <br/>
+                <br/>
+                <br/>
               </div>
               <Table casesType={casesType} countries={tableData} />
               

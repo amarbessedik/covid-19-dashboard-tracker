@@ -1,5 +1,5 @@
 .navbar {
-  height: 100px;
+  height: 80px;
   box-shadow: 0 0 12px -4px #555;
   max-width: 100vw;
   display: flex;
@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 2;
 }
 
 .logo {
@@ -24,7 +24,6 @@
   min-width: fit-content;
   cursor: pointer;
   text-decoration: none !important;
-  /* border: 1px solid red; */
 }
 .logo span {
   display: block !important;
@@ -44,6 +43,7 @@
   display: flex;
   flex: 5;
   align-items: center;
+  justify-content: flex-end;
   height: 100%;
   color: #777;
   list-style: none;
@@ -63,9 +63,9 @@
   color: rgb(18, 197, 182);
   text-transform: uppercase;
 }
-.links li:hover,
+.links li a:hover,
 .logo:hover {
-  background: rgba(18, 197, 182, 0.15);
+  color: rgba(131, 241, 232, 0.938);
 }
 
 @media screen and (max-width:900px){
@@ -75,7 +75,6 @@
 }
 
 .hamburger{
-  /* border: 0.05rem solid rgb(2, 165, 151); */
   width: 40px;
   height:40px;
   cursor: pointer;
@@ -94,10 +93,13 @@
   font-size: 2.5rem !important;
   color: rgb(2, 165, 151);
 }
+.bar:hover{
+  transform: scale(1.1);
+}
 .side__menu{
   position: absolute;
   right: -70px;
-  top: 55px;
+  top: 45px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -118,15 +120,20 @@
 .side__menu__links li a{
   color: rgb(2, 165, 151);
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 1rem;
+}
+.side__menu__links li a{
+  color: rgb(18, 197, 182);
 }
 .side__menu__links li{
   width: 100%;
   margin-bottom: 15px;
   padding: 3px;
 }
-.side__menu__links li:hover{
-  background: #333;
+.side__menu__links li a:hover{
+  color: rgb(137, 247, 237);
+  font-weight: 500;
 }
 
 @media screen and (min-width: 900px){

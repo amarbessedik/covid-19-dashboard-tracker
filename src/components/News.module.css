@@ -9,12 +9,13 @@
   flex-direction: column;
   justify-content: center;
 }
-.featured__article h1 {
+.featured__article h3 {
   margin: auto;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: rgb(6, 199, 183);
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  text-align: center;
 }
 .featured__article p {
   margin: 0 auto;

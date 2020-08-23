@@ -9,7 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Share } from "@material-ui/icons";
 
-function Article({height = 150, article: { urlToImage, url, description, title } }) {
+function Article({height = 150, article: { urlToImage, url, content, title } }) {
   return (
     <Card className={styles.card}>
       <CardActionArea>
@@ -25,7 +25,7 @@ function Article({height = 150, article: { urlToImage, url, description, title }
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {description}
+            {content}
           </Typography>
         </CardContent>
       </CardActionArea>

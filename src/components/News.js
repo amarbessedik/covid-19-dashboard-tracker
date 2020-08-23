@@ -27,16 +27,16 @@ function News() {
     fetchNewsArticles();
   }, []);
 
-  console.log("newsArticles >>> ", newsArticles);
+  // console.log("newsArticles >>> ", newsArticles);
 
   const handleClick = (index) => {
     setFeaturedNewsArticle(index);
   };
 
   return (
-    <div id='newss' className={styles.news__container}>
+    <div id='_news' className={styles.news__container}>
       <div className={styles.featured__article}>
-        <h1>Featured Article</h1>
+  <h3>{newsArticles.length ? newsArticles[featuredNewsArticle].title : null}</h3>
 
         {newsArticles.length ? (
           <p>{newsArticles[featuredNewsArticle].author}</p>

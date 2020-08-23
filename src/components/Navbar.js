@@ -6,14 +6,21 @@ import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar() {
   const [open, setOpen] = useState(false); 
+
+  const openMenu = () =>{
+    let side__menu = document.getElementById("side__menu");
+    side__menu.style.transform = "translateX(0)";
+    setOpen(true);
+  }
+  const closeMenu = () => {
+    let side__menu = document.getElementById("side__menu");
+    side__menu.style.transform = "translateX(100%)";
+    setOpen(false);
+  }
+
   const handleClick = (e) => {
     e.preventDefault();
-    let side__menu = document.getElementById("side__menu");
-
-    open
-      ? (side__menu.style.transform = "translateX(100%)")
-      : (side__menu.style.transform = "translateX(0)");
-    setOpen(!open);  
+    open? closeMenu():openMenu();
   };
   return (
     <header className={styles.navbar}>
@@ -30,13 +37,13 @@ function Navbar() {
           <a href="#map">Map</a>
         </li>
         <li>
-          <a href="#table">Cases By Country</a>
+          <a href="#table">Cases</a>
         </li>
         <li>
-          <a href="#graph">Worldwide Line Graph</a>
+          <a href="#graph">Graph</a>
         </li>
         <li>
-          <a href="#news">Coronavirus News</a>
+          <a href="#news">Covid-19 News</a>
         </li>
       </ul>
       <div onClick={handleClick} className={styles.hamburger}>
@@ -48,16 +55,16 @@ function Navbar() {
       </div>
       <div id="side__menu" className={styles.side__menu}>
         <ul className={styles.side__menu__links}>
-          <li>
+          <li onClick={closeMenu}>
             <a href="#map">Map</a>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <a href="#table">Cases</a>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <a href="#graph">Graph</a>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <a href="#news">News</a>
           </li>
         </ul>
