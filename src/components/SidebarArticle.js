@@ -3,7 +3,7 @@ import styles from './SidebarArticle.module.css';
 import news from '../images/news.jpg';
 
 const SidebarArticle = ({
-  article: { urlToImage, content, description, title },
+  article: { urlToImage, content, title },
 }) => {
   return (
       <div className={styles.sidebarArticle__container}>

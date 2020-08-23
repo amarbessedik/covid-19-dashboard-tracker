@@ -34,7 +34,7 @@ function News() {
   };
 
   return (
-    <div className={styles.news__container}>
+    <div id='newss' className={styles.news__container}>
       <div className={styles.featured__article}>
         <h1>Featured Article</h1>
 
@@ -52,9 +52,10 @@ function News() {
       <div style={{ textAlign: "left" }}>
         <h3
           style={{
-            margin: "50px 0",
+            margin: "15px 0px 90px 0",
             color: "#777",
             textTransform: "uppercase",
+            textAlign: "center",
           }}
         >
           Discover News Article List

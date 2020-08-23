@@ -1,6 +1,5 @@
 .map {
   height: 500px;
-  /* background: rgb(22, 22, 22); */
   padding: 1rem;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -9,10 +8,11 @@
 }
 .map .leaflet-container {
   height: 100%; 
+  z-index: -1;
 }
+
 .popup__header{
   display: flex;
-  /* justify-content: flex-start; */
   align-items: center;
   margin-bottom: 10px;
 }
@@ -22,17 +22,14 @@
   background-size: cover;
   background-position: center;
   border-radius: 6px;
-  /* margin: auto; */
   box-shadow: 0 0 2px 1px #ccc;
   margin-right: 10px;
 }
 
 .popup__name{
-  /* flex: 1; */
    font-size: 18px;
    font-weight: bold;
    color: #555;
-   /* border-bottom: 1px solid; */
    align-self: center;
 }
 

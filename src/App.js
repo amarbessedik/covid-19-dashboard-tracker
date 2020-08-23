@@ -126,7 +126,7 @@ function App() {
                 total={prettyPrintStat(countryInfo.deaths)}
               />
             </div>
-            <div className="app__dropdown">
+            <div id='map' className="app__dropdown">
               <FormControl className="form__dropdown">
                 <Select
                   variant="outlined"
@@ -163,7 +163,7 @@ function App() {
           <Card>
             <CardContent>
               {/* graph */}
-              <h3
+              <h3 id='graph'
                 style={{ textTransform: "uppercase" }}
                 className="app__right__graph"
               >
@@ -180,7 +180,7 @@ function App() {
                 <LineGraph casesType={casesType} location={country} />
               )}
               {/* country table */}
-              <div className="app__right__table__header">
+              <div id='table' className="app__right__table__header">
                 <h3 style={{ textTransform: "uppercase" }}>
                   Live Cases by Country
                 </h3>

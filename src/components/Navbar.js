@@ -1,8 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./Navbar.module.css";
 import logo from '../images/logo.png';
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar() {
+  const [open, setOpen] = useState(false); 
+  const handleClick = (e) => {
+    e.preventDefault();
+    let side__menu = document.getElementById("side__menu");
+
+    open
+      ? (side__menu.style.transform = "translateX(100%)")
+      : (side__menu.style.transform = "translateX(0)");
+    setOpen(!open);  
+  };
   return (
     <header className={styles.navbar}>
       <div className={styles.logo}>
@@ -15,27 +27,41 @@ function Navbar() {
       </div>
       <ul className={styles.links}>
         <li>
-          <a href="/">Map</a>
+          <a href="#map">Map</a>
         </li>
         <li>
-          <a href="/">Cases By Country</a>
+          <a href="#table">Cases By Country</a>
         </li>
         <li>
-          <a href="/">Worldwide Line Graph</a>
+          <a href="#graph">Worldwide Line Graph</a>
         </li>
         <li>
-          <a href="/">Coronavirus News</a>
+          <a href="#news">Coronavirus News</a>
         </li>
       </ul>
-      {/* <div className={styles.search__bar}>
-        <input
-          type="text"
-          name="searchbar"
-          className={styles.search__input}
-          placeholder="Search latest news on coronavirus"
-        />
-        <button type="button">Search</button>
-      </div> */}
+      <div onClick={handleClick} className={styles.hamburger}>
+        {open ? (
+          <CloseIcon className={styles.bar} />
+        ) : (
+          <MenuIcon className={styles.bar} />
+        )}
+      </div>
+      <div id="side__menu" className={styles.side__menu}>
+        <ul className={styles.side__menu__links}>
+          <li>
+            <a href="#map">Map</a>
+          </li>
+          <li>
+            <a href="#table">Cases</a>
+          </li>
+          <li>
+            <a href="#graph">Graph</a>
+          </li>
+          <li>
+            <a href="#news">News</a>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }

@@ -39,7 +39,7 @@ function LineGraph({
   ];
 
   return (
-    <div>
+    <div id='graphh'>
       {data?.length > 0 && (
         <Line
           width={width}

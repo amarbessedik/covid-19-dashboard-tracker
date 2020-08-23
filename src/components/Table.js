@@ -5,7 +5,7 @@ import numeral from "numeral";
 function Table({ countries }) {
   // console.log('countries from TABLE >>>>', countries);
   return (
-    <div className={styles.table__outer__container}>
+    <div id='tablee' className={styles.table__outer__container}>
       <div className={styles.table__inner__container}>
         <div className={styles.table}>
           <table>
