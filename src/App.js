@@ -196,10 +196,10 @@ function App() {
           </Card>
         </div>
       </div>
-      <NewsBanner />
+      {/* <NewsBanner />
       <div className="news">
         <News />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
