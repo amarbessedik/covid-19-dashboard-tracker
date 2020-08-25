@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 
 import InfoBox from "./components/InfoBox";
-import News from "./components/News";
+
 import Map from "./components/Map";
 import Table from "./components/Table";
 import LineGraph from "./components/LineGraph";
@@ -17,9 +17,10 @@ import Footer from "./components/Footer";
 import { sortData, prettyPrintStat } from "./util";
 import "leaflet/dist/leaflet.css";
 import Navbar from "./components/Navbar";
-import NewsBanner from "./components/NewsBanner";
 import LineGraphButtons from "./components/LineGraphButtons";
 import ScrollTop from "./components/ScrollTop";
+// import News from "./components/News";
+// import NewsBanner from "./components/NewsBanner";
 
 function App() {
   //local state about countries
@@ -187,9 +188,6 @@ function App() {
                   Live Cases by Country
                 </h3>
                 <p>(Descending Order)</p>
-                <br />
-                <br />
-                <br />
               </div>
               <Table casesType={casesType} countries={tableData} />
             </CardContent>
