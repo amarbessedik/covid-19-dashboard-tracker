@@ -3,6 +3,10 @@ import styles from "./Navbar.module.css";
 import logo from '../images/logo.png';
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import MapIcon from "@material-ui/icons/Map";
+import TimelineIcon from "@material-ui/icons/Timeline";
+import PublicIcon from "@material-ui/icons/Public";
+import InfoIcon from "@material-ui/icons/Info";
 
 function Navbar() {
   const [open, setOpen] = useState(false); 
@@ -22,28 +26,38 @@ function Navbar() {
     e.preventDefault();
     open? closeMenu():openMenu();
   };
+
+  const cleanUrl = () =>{
+    window.history.pushState("object or string", "Page Title", "/");    
+  }
   return (
-    <header className={styles.navbar}>
+    <header id='top' className={styles.navbar}>
       <div className={styles.logo}>
-        <img src={logo} alt="logo" />
-        <div className={styles.logo__text}>
-          <span>COVID-19</span>
-          <span>GLOBAL</span>
-          <span>TRACKER</span>
-        </div>
+        <a href="/">
+          <img src={logo} alt="logo" />
+          <div className={styles.logo__text}>
+            <span>COVID-19</span>
+            <span>GLOBAL</span>
+            <span>TRACKER</span>
+          </div>
+        </a>
       </div>
       <ul className={styles.links}>
-        <li>
-          <a href="#map">Map</a>
+        <li >
+          <MapIcon className={styles.link__icon} />
+          <a onMouseLeave={cleanUrl} href="#map">Map</a>
         </li>
         <li>
-          <a href="#table">Cases</a>
+          <PublicIcon className={styles.link__icon} />
+          <a onMouseLeave={cleanUrl} href="#table">Cases</a>
         </li>
         <li>
-          <a href="#graph">Graph</a>
+          <TimelineIcon className={styles.link__icon} />
+          <a onMouseLeave={cleanUrl} href="#graph">Graph</a>
         </li>
         <li>
-          <a href="#news">Covid-19 News</a>
+          <InfoIcon className={styles.link__icon} />
+          <a onMouseLeave={cleanUrl} href="#news">News</a>
         </li>
       </ul>
       <div onClick={handleClick} className={styles.hamburger}>
@@ -56,16 +70,20 @@ function Navbar() {
       <div id="side__menu" className={styles.side__menu}>
         <ul className={styles.side__menu__links}>
           <li onClick={closeMenu}>
-            <a href="#map">Map</a>
+            <MapIcon className={styles.link__icon} />
+            <a onMouseLeave={cleanUrl} href="#map">Map</a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#table">Cases</a>
+            <PublicIcon className={styles.link__icon} />
+            <a onMouseLeave={cleanUrl} href="#table">Cases</a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#graph">Graph</a>
+            <TimelineIcon className={styles.link__icon} />
+            <a onMouseLeave={cleanUrl} href="#graph">Graph</a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#news">News</a>
+            <InfoIcon className={styles.link__icon} />
+            <a onMouseLeave={cleanUrl} href="#news">News</a>
           </li>
         </ul>
       </div>

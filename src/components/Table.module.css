@@ -61,7 +61,7 @@ tr td:first-child, th:first-child{
 }
 th {
   text-transform: uppercase;
-  color: rgb(8, 201, 169);
+  color: #33c5ee;
 }
 td,
 th {
@@ -75,7 +75,6 @@ th {
 }
 .flag {
   display: flex;
-  /* border: 1px solid red; */
   width: 300px;
 }
 

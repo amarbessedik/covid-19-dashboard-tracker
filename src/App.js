@@ -12,7 +12,6 @@ import InfoBox from "./components/InfoBox";
 import News from "./components/News";
 import Map from "./components/Map";
 import Table from "./components/Table";
-// import MuiVirtualizedTable from "./components/Table2";
 import LineGraph from "./components/LineGraph";
 import Footer from "./components/Footer";
 import { sortData, prettyPrintStat } from "./util";
@@ -20,6 +19,7 @@ import "leaflet/dist/leaflet.css";
 import Navbar from "./components/Navbar";
 import NewsBanner from "./components/NewsBanner";
 import LineGraphButtons from "./components/LineGraphButtons";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   //local state about countries
@@ -90,10 +90,11 @@ function App() {
         setMapZoom(4);
       });
   };
-
-  return (
+  
+    return (
     <div className="container">
       <Navbar />
+      <ScrollTop />
       <div className="app">
         <div className="app__left">
           <div className="app__header">
@@ -126,7 +127,7 @@ function App() {
                 total={prettyPrintStat(countryInfo.deaths)}
               />
             </div>
-            <div id='map' className="app__dropdown">
+            <div id="map" className="app__dropdown">
               <FormControl className="form__dropdown">
                 <Select
                   variant="outlined"
@@ -159,11 +160,12 @@ function App() {
             casesType={casesType}
           />
         </div>
-        <div id='graph' className="app__right">
+        <div id="graph" className="app__right">
           <Card>
             <CardContent>
               {/* graph */}
-              <h3 id='_graph'
+              <h3
+                id="_graph"
                 style={{ textTransform: "uppercase" }}
                 className="app__right__graph"
               >
@@ -180,17 +182,16 @@ function App() {
                 <LineGraph casesType={casesType} location={country} />
               )}
               {/* country table */}
-              <div id='table' className="app__right__table__header">
+              <div id="table" className="app__right__table__header">
                 <h3 style={{ textTransform: "uppercase" }}>
                   Live Cases by Country
                 </h3>
                 <p>(Descending Order)</p>
-                <br/>
-                <br/>
-                <br/>
+                <br />
+                <br />
+                <br />
               </div>
               <Table casesType={casesType} countries={tableData} />
-              
             </CardContent>
           </Card>
         </div>

@@ -1,0 +1,31 @@
+.scrollUp {
+  position: fixed; 
+  width: 100%;
+  bottom: 30px;
+  right:20px;
+  color: #33c5ee;
+  font-size: 2.5rem !important;
+  background: #fff;
+  box-shadow: 0 0 15px -4px rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.6;
+}
+
+.scrollUp:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

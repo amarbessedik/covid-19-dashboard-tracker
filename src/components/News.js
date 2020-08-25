@@ -27,7 +27,7 @@ function News() {
     fetchNewsArticles();
   }, []);
 
-  // console.log("newsArticles >>> ", newsArticles);
+  // console.log("newsArticles >>> ", newsArticles); 
 
   const handleClick = (index) => {
     setFeaturedNewsArticle(index);
@@ -52,7 +52,7 @@ function News() {
       <div style={{ textAlign: "left" }}>
         <h3
           style={{
-            margin: "15px 0px 90px 0",
+            margin: "30px 0px 80px 0",
             color: "#777",
             textTransform: "uppercase",
             textAlign: "center",
