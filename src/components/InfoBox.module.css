@@ -1,13 +1,15 @@
 .infoBox {
   box-sizing: border-box !important;
   border-radius: 5px;
-  flex: 1;
-  background-color: rgba(0,0,0, 0.38) !important;
-  border-top: 15px solid transparent;
+  background-color: rgba(0,0,0) !important;
+  border: 5px solid transparent;
+}
+.infoBox:hover{
+  background: rgba(4, 15, 46,.8)!important;
 }
 
 .infoBox:not(:last-child) {
-  margin-right: 15px;
+  margin-bottom: 5px;
 }
 .infoBox__title,
 .infoBox__cases,
@@ -25,54 +27,58 @@
 .infoBox__cases {
   color: #ca0f0f !important;
   background: #fff;
-  font-size: 2rem;
+  font-size: 2rem!important;
   margin-bottom: 0.5rem;
 }
 
 .infoBox__total,
 .infoBox__title {
-  font-size: 1rem !important;
+  font-size: .75rem !important;
   text-shadow: 0 0 10px 5px rgba(0, 0, 0,1) !important;
   font-weight: 400 !important;
 }
 
 .infoBox__red {
-  border-top: 15px solid #f32c2c !important;
+  border: 5px solid #f32c2c !important;
 }
 .infoBox__green {
-  border-top: 15px solid rgb(61, 235, 191) !important;
+  border: 5px solid rgb(61, 235, 191) !important;
 }
 .infoBox__blue {
-  border-top: 15px solid rgb(13, 47, 241) !important;
+  border: 5px solid rgb(13, 47, 241) !important;
 }
 .red{
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: red;
   text-align: center;
   background: white;
+    border-radius: 5px;
+  padding: px;
 }
 
 .blue{
-  font-size: 2rem;
-  color: blue;
+  font-size: 1.2rem;
+  color: #3ea0fc;
   text-align: center;
   background: white;
+  border-radius: 5px;
+  padding: 4px;
 }
 
 .green{
-  font-size: 2rem;
-  color: rgb(61, 235, 191);
+  font-size: 1.2rem;
+  color: rgb(0, 218, 163);
   text-align: center;
   background: white;
+    border-radius: 5px;
+  padding: px;
 }
 
 @media (max-width: 700px) {
   .infoBox {
-    margin-bottom: 5px;
-    width: 100%;
-    height: 75%;
+    /* margin-bottom: 5px; */
+    /* width: 100%;
+    height: 75%; */
   }
-  .infoBox:last-child {
-    margin-left: -15px !important;
-  }
+  
 }

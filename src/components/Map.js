@@ -8,7 +8,8 @@ function Map({ countries, center, zoom, casesType}) {
     return (
         <div id='mapp' className='map'>
             <LeafletMap center={center} zoom={zoom}>
-                <TileLayer 
+                <TileLayer
+                fillColor='red'
                 url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                 attribution='&copy; <ahref="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />

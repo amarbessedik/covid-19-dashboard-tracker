@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import InfoBox from "./components/InfoBox";
+import ScrollTop from "./components/ScrollTop";
+import LineGraphButtons from "./components/LineGraphButtons";
+import Map from "./components/Map";
+import LineGraph from "./components/LineGraph";
+import Table from "./components/Table";
+import './App2.css';
 import {
   FormControl,
   MenuItem,
@@ -7,22 +15,12 @@ import {
   Card,
   CardContent,
 } from "@material-ui/core";
-
-import InfoBox from "./components/InfoBox";
-
-import Map from "./components/Map";
-import Table from "./components/Table";
-import LineGraph from "./components/LineGraph";
-import Footer from "./components/Footer";
 import { sortData, prettyPrintStat } from "./util";
 import "leaflet/dist/leaflet.css";
-import Navbar from "./components/Navbar";
-import LineGraphButtons from "./components/LineGraphButtons";
-import ScrollTop from "./components/ScrollTop";
-// import News from "./components/News";
-// import NewsBanner from "./components/NewsBanner";
+import Presentation from "./components/Presentation";
 
-function App() {
+
+export default function App2() {
   //local state about countries
   const [countries, setCountries] = useState([]);
   //Track which country is selected
@@ -32,7 +30,10 @@ function App() {
   //Table data
   const [tableData, setTableData] = useState([]);
   //Map center
-  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapCenter, setMapCenter] = useState({
+    lat: 34.80746,
+    lng: -40.4796,
+  });
   const [mapZoom, setMapZoom] = useState(2);
   //map countries
   const [mapCountries, setMapCountries] = useState([]);
@@ -91,69 +92,14 @@ function App() {
         setMapZoom(4);
       });
   };
-  
-    return (
-    <div className="container">
-      <Navbar />
-      <ScrollTop />
-      <div className="app">
-        
-        <div className="app__left">
-          <div className="app__header">
-            {/* <h1>COVID-19 DASHBOARD TRACKER</h1> */}
-          </div>
-          <div className="bg__image">
-            <div className="info__stats">
-              <InfoBox
-                active={casesType === "cases"}
-                isBlue={true}
-                onClick={(e) => setCasesType("cases")}
-                title="Infected"
-                cases={prettyPrintStat(countryInfo.todayCases)}
-                total={prettyPrintStat(countryInfo.cases)}
-              />
-              <InfoBox
-                active={casesType === "recovered"}
-                isGreen={true}
-                onClick={(e) => setCasesType("recovered")}
-                title="Recovered"
-                cases={prettyPrintStat(countryInfo.todayRecovered)}
-                total={prettyPrintStat(countryInfo.recovered)}
-              />
-              <InfoBox
-                active={casesType === "deaths"}
-                isRed={true}
-                onClick={(e) => setCasesType("deaths")}
-                title="Fatalities"
-                cases={prettyPrintStat(countryInfo.todayDeaths)}
-                total={prettyPrintStat(countryInfo.deaths)}
-              />
-            </div>
-            <div id="map" className="app__dropdown">
-              <FormControl className="form__dropdown">
-                <Select
-                  variant="outlined"
-                  value={country}
-                  onChange={onCountryChange}
-                >
-                  <MenuItem key="0" value="worldwide">
-                    Worldwide
-                  </MenuItem>
-                  {
-                    /* loop through all countries and display each as an option */
-                    countries.map((country) => {
-                      return (
-                        <MenuItem key={country.id} value={country.value}>
-                          {country.name}
-                        </MenuItem>
-                      );
-                    })
-                  }
-                </Select>
-              </FormControl>
-            </div>
-          </div>
-          {/* map */}
+
+  return (
+    <div className="app2">
+      <div id="map" className="app2__container">
+        <Navbar />
+        <ScrollTop />
+        {/* map */}
+        <div id="mapp" className="app__map">
           <Map
             //  countries, center, zoom, casesType
             countries={mapCountries}
@@ -162,12 +108,64 @@ function App() {
             casesType={casesType}
           />
         </div>
-        <div id="graph" className="app__right">
+        {/* dropdown */}
+        <div id="graph" className="app__dropdown">
+          <FormControl className="form__dropdown">
+            <Select
+              variant="outlined"
+              value={country}
+              onChange={onCountryChange}
+            >
+              <MenuItem key="0" value="worldwide">
+                <span>Worldwide</span>
+              </MenuItem>
+              {
+                /* loop through all countries and display each as an option */
+                countries.map((country) => {
+                  return (
+                    <MenuItem key={country.id} value={country.value}>
+                      {country.name}
+                    </MenuItem>
+                  );
+                })
+              }
+            </Select>
+          </FormControl>
+        </div>
+        {/* stat */}
+        <div className="app__info__stats">
+          <InfoBox
+            active={casesType === "cases"}
+            isBlue={true}
+            onClick={(e) => setCasesType("cases")}
+            title="Infected"
+            cases={prettyPrintStat(countryInfo.todayCases)}
+            total={prettyPrintStat(countryInfo.cases)}
+          />
+          <InfoBox
+            active={casesType === "recovered"}
+            isGreen={true}
+            onClick={(e) => setCasesType("recovered")}
+            title="Recovered"
+            cases={prettyPrintStat(countryInfo.todayRecovered)}
+            total={prettyPrintStat(countryInfo.recovered)}
+          />
+          <InfoBox
+            active={casesType === "deaths"}
+            isRed={true}
+            onClick={(e) => setCasesType("deaths")}
+            title="Fatalities"
+            cases={prettyPrintStat(countryInfo.todayDeaths)}
+            total={prettyPrintStat(countryInfo.deaths)}
+          />
+        </div>
+        {/* graph */}
+        {/* table */}
+        <div className="app__graph__table">
           <Card>
             <CardContent>
               {/* graph */}
               <h3
-                id="_graph"
                 style={{ textTransform: "uppercase" }}
                 className="app__right__graph"
               >
@@ -184,7 +182,8 @@ function App() {
                 <LineGraph casesType={casesType} location={country} />
               )}
               {/* country table */}
-              <div id="table" className="app__right__table__header">
+              <div id="table" style={{height: '80px'}}></div>
+              <div id="_table" className="app__right__table__header">
                 <h3 style={{ textTransform: "uppercase" }}>
                   Live Cases by Country
                 </h3>
@@ -194,14 +193,11 @@ function App() {
             </CardContent>
           </Card>
         </div>
+        {/* presentation */}
+        <Presentation />
+        {/* footer */}
+        <Footer />
       </div>
-      {/* <NewsBanner />
-      <div className="news">
-        <News />
-      </div> */}
-      <Footer />
     </div>
   );
 }
-
-export default App;

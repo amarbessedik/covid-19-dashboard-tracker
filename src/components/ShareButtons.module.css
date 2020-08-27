@@ -1,19 +1,19 @@
-.share__buttons {
+/* .share__buttons {
   box-sizing: border-box;
-}
+} */
 
 .share__buttons img {
-  height: 32px;
-  padding: 3px;
+  height: 35px;
+  padding: 5px;
   border: 0;
   box-shadow: 0;
-  display: inline;
-  box-shadow: 0 0 12px -4px #000;
+  box-shadow: 0 0 12px -4px #777;
+  background: #0000;
   border-radius: 50%;
    box-sizing: border-box;
    margin: 0 5px;
    transition: all 0.2s ease-in-out;
 }
 .share__buttons img:hover{
-    padding: 5px;
+    padding: 7px;
 }

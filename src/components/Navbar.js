@@ -57,7 +57,7 @@ function Navbar() {
         </li>
         <li>
           <InfoIcon className={styles.link__icon} />
-          <a onMouseLeave={cleanUrl} href="#news">News</a>
+          <a onMouseLeave={cleanUrl} href="#about">About</a>
         </li>
       </ul>
       <div onClick={handleClick} className={styles.hamburger}>
@@ -83,7 +83,7 @@ function Navbar() {
           </li>
           <li onClick={closeMenu}>
             <InfoIcon className={styles.link__icon} />
-            <a onMouseLeave={cleanUrl} href="#news">News</a>
+            <a onMouseLeave={cleanUrl} href="#about">About</a>
           </li>
         </ul>
       </div>

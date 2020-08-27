@@ -1,0 +1,15 @@
+.app__about__data{
+    color: #ccc;
+    padding: 100px 15%;
+    margin-bottom: 2px;
+    background: #20232a;
+    box-shadow: 0 0 15px -4px #999;
+}
+
+.about__link{
+    text-decoration: none;
+    color: #61dafb;
+}
+.about__link:hover{
+    color: rgb(230, 18, 10);
+}

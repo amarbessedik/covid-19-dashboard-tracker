@@ -1,11 +1,12 @@
 .scrollUp {
   position: fixed; 
-  width: 100%;
+  width: 50px!important;
+  height: 50px!important;
   bottom: 30px;
   right:20px;
   color: #33c5ee;
-  font-size: 2.5rem !important;
-  background: #fff;
+  font-size: 2.8rem !important;
+  background: #000;
   box-shadow: 0 0 15px -4px rgba(0, 0, 0, 1);
   border-radius: 50%;
   align-items: center;
@@ -14,7 +15,7 @@
   cursor: pointer;
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .scrollUp:hover{

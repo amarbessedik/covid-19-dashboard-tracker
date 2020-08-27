@@ -1,14 +1,15 @@
 .footer{
-    background: rgb(22, 22, 22);
-    padding: 50px;
-    color: #777;
+    background: #20232a;
+    padding: 20px;
+    color: #61dafb;
     display: flex;
-
+    justify-content: center;
 }
 .footer__list{
     flex: 1;
-}
-
-.class-temp{
-    color: rgba(251, 65, 65, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
 }
