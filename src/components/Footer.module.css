@@ -11,5 +11,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    list-style-type: none;
+    list-style-type: none; 
+}
+
+@media screen and(width: 750px){
+    .footer__list{
+        font-size: 90%;
+    }
 }

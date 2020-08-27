@@ -2,7 +2,7 @@
   box-sizing: border-box !important;
   border-radius: 5px;
   background-color: rgba(0,0,0) !important;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
 }
 .infoBox:hover{
   background: rgba(4, 15, 46,.8)!important;
@@ -39,39 +39,39 @@
 }
 
 .infoBox__red {
-  border: 5px solid #f32c2c !important;
+  border: 3px solid #f32c2c !important;
 }
 .infoBox__green {
-  border: 5px solid rgb(61, 235, 191) !important;
+  border: 3px solid rgb(61, 235, 191) !important;
 }
 .infoBox__blue {
-  border: 5px solid rgb(13, 47, 241) !important;
+  border: 3px solid rgb(13, 47, 241) !important;
 }
 .red{
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: red;
   text-align: center;
   background: white;
     border-radius: 5px;
-  padding: px;
+  padding: -4px;
 }
 
 .blue{
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #3ea0fc;
   text-align: center;
   background: white;
   border-radius: 5px;
-  padding: 4px;
+  padding: -4px;
 }
 
 .green{
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(0, 218, 163);
   text-align: center;
   background: white;
     border-radius: 5px;
-  padding: px;
+  padding: -4px;
 }
 
 @media (max-width: 700px) {

@@ -11,6 +11,8 @@ html {
 
 .app__map{
     margin-top: 75px;
+    padding: 25px 2%;
+    background: #20232a;
 }
 
 .app2 {
@@ -18,7 +20,6 @@ html {
   justify-content: space-around;
   width: 100vw;
   margin: auto;
-  /* margin-top: 150px; */
 }
 .app__header {
   display: flex;
@@ -67,18 +68,17 @@ html {
   box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
 }
 .app__info__stats {
-  padding: 5px;
+  padding: 3px;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   position: fixed;
-  top: 23vh;
-  /* border: 1px solid #ccc; */
+  top: 30vh;
   box-shadow: 0 0 15px -4px #555;
   border-radius: 5px;
-  margin-left: 15px;
-  height: 430px;
+  margin-left: 40px;
+  height: fit-content;
   width: 140px;
 }
 
@@ -89,7 +89,7 @@ html {
     margin-top: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1165px) {
   .app2 {
     flex-direction: column;
   }
@@ -113,6 +113,6 @@ html {
     font-size: 1.5rem;
   }
   .app__graph__table, .app__info__stats{
-    width: 90vw;
+    width: 93vw;
   }
 }
