@@ -37,7 +37,7 @@ function Navbar() {
           <img src={logo} alt="logo" />
           <div className={styles.logo__text}>
             <span>COVID-19</span>
-            <span>GLOBAL</span>
+            <span>WORLDWIDE</span>
             <span>TRACKER</span>
           </div>
         </a>
