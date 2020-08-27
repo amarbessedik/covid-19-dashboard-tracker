@@ -18,8 +18,8 @@ function Footer() {
                 : null}
             </h3>
           </li>
-          <li style={{ textTransform: "uppercase" }} style={center}>
-            <span>Designed &amp; Developed by Amar Bessedik</span>
+          <li style={center}>
+            <span style={{textTransform: 'uppercase'}}>Designed &amp; Developed by Amar Bessedik</span>
           </li>
           <li>
             <span style={center}>amar.bessedik@gmail.com </span>
