@@ -95,7 +95,7 @@ html {
   }
 
   .app__info__stats {
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
   width: 75vw;
   position: relative;
