@@ -12,24 +12,24 @@
 
 **screenshot 1**
 
-![](src/images/screenshots/Capture1.png)
+<img src="src/images/screenshots/Capture1.PNG">
 
 **screenshot 2**
 
-<img src='./src/images/screenshots/Capture2.png'>
+<img src='src/images/screenshots/Capture2.PNG'>
 
 **screenshot 3**
 
-<img src='./src/images/screenshots/Capture3.png'>
+<img src='src/images/screenshots/Capture3.PNG'>
 
 **screenshot 4**
 
-<img src='./src/images/screenshots/Capture4.png'>
+<img src='src/images/screenshots/Capture4.PNG'>
 
 **screenshot 5**
 
-<img src='./src/images/screenshots/Capture5.png'>
+<img src='src/images/screenshots/Capture5.PNG'>
 
 **screenshot 6**
 
-<img src='./src/images/screenshots/Capture6.png'>
+<img src='src/images/screenshots/Capture6.PNG'>
