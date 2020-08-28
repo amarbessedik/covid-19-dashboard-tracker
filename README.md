@@ -10,26 +10,26 @@
 
 **Screenshots of the application:**
 
-**screenshot 1**
+**Map:**
 
 <img src="src/images/screenshots/Capture1.PNG">
 
-**screenshot 2**
+**Graph:**
 
 <img src='src/images/screenshots/Capture2.PNG'>
 
-**screenshot 3**
+**Table:**
 
 <img src='src/images/screenshots/Capture3.PNG'>
 
-**screenshot 4**
+**About Data:**
 
 <img src='src/images/screenshots/Capture4.PNG'>
 
-**screenshot 5**
+**Mobile -> Hamburger menu:**
 
 <img src='src/images/screenshots/Capture5.PNG'>
 
-**screenshot 6**
+**Mobile -> Side menu links:**
 
 <img src='src/images/screenshots/Capture6.PNG'>
