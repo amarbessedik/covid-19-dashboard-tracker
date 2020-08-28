@@ -12,7 +12,7 @@
 
 **screenshot 1**
 
-<img src='./src/images/screenshots/Capture1.png'>
+<img src='src/images/screenshots/Capture1.png'>
 
 **screenshot 2**
 
