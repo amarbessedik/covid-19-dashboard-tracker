@@ -1,8 +1,6 @@
 .lineGraph__buttons{
     display: flex;
-    /* border: 2px solid rgb(61, 235, 191); */
     border-radius: 5px;
-    /* background: rgba(55, 214, 174, .1); */
     padding: 7px;
     margin-bottom: 25px;
     justify-content: center;

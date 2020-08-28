@@ -4,7 +4,7 @@ import { buildChartData, options, casesTypeColors } from "../util";
 // import styles from "./LineGraph.module.css";
 //buildChartDatasets
 
-function LineGraph({
+function LineGraph({ 
   height = 320,
   width = 360,
   location = "all",

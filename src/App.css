@@ -9,12 +9,17 @@ html {
   scroll-behavior: smooth;
 }
 
-.app {
+.app__map{
+    margin-top: 75px;
+    padding: 25px 2%;
+    background: #20232a;
+}
+
+.app2 {
   display: flex;
   justify-content: space-around;
-  width: 90vw;
+  width: 100vw;
   margin: auto;
-  margin-top: 150px;
 }
 .app__header {
   display: flex;
@@ -30,91 +35,84 @@ html {
   padding: 5px;
   display: flex;
   justify-content: center;
+  position: absolute;
+  left: 35vw;
+  margin: auto;
+  top: 570px;
 }
 .form__dropdown {
-  background: whitesmoke;
-  width: 300px;
+  background: #fff;
+  width: 35vw;
   height: 100%;
   border-radius: 5px;
 }
 .form__dropdown:focus {
   outline: none !important;
 }
-.app__left {
-  width: 55vw;
-  /* border: 2px solid red; */
-}
-.app__right__table__header {
+.app__table__header {
   text-align: center;
 }
 .MuiCardContent-root h3{
   margin-block-start: 20px !important;
     margin-block-end: 20px !important;
 }
-.app__right__graph {
+.app__graph {
   margin: 40px auto;
   text-align: center;
 }
-.app__right {
+.app {
   width: 30vw;
   margin-top: 20px;
 }
-.app__right .MuiPaper-root {
+.app .MuiPaper-root {
   box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
 }
-.info__stats {
-  padding: 30px;
+.app__info__stats {
+  padding: 3px;
   display: flex;
-  justify-content: space-around;
+  box-sizing: border-box;
+  flex-direction: column;
   align-items: center;
-}
-
-.bg__image {
-  background: url("./images/covid-19.jpg");
-  background-size: cover;
-  min-height: 320px;
+  position: fixed;
+  top: 30vh;
+  box-shadow: 0 0 15px -4px #555;
   border-radius: 5px;
-  box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
+  margin-left: 40px;
+  height: fit-content;
+  width: 140px;
 }
 
-.news {
-  width: 90vw;
-  margin: auto;
-}
-
-.news__banner {
-  background-color: #20232a;
-  color: #61dafb;
-  font-size: 3rem;
-  width: 100%;
-  height: 300px;
-  padding: 20px;
-  text-align: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-@media (max-width: 990px) {
-  .app__left {
-    width: 80vw;
+.app__graph__table{
+    width: 75vw;
     margin: auto;
-  }
-  .app__right {
-    width: 80vw;
-    margin: auto;
-  }
-  .app {
+    box-shadow: 0 0 15px -4px #555;
+    margin-top: 50px;
+}
+
+@media (max-width: 1165px) {
+  .app2 {
     flex-direction: column;
   }
+
+  .app__info__stats {
+  justify-content: space-between;
+  flex-direction: row;
+  width: 75vw;
+  position: relative;
+  height: fit-content;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10vh;
+}
   
 }
 
 @media (max-width: 700px) {
-  .info__stats {
-    flex-direction: column;
-  }
   .app__header h1 {
     font-size: 1.5rem;
+  }
+  .app__graph__table, .app__info__stats{
+    width: 93vw;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Presentation.module.css';
+import styles from './AboutData.module.css';
 
 const Presentation = () => {
     return (

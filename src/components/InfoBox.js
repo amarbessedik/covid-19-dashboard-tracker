@@ -25,9 +25,9 @@ function InfoBox({
       className={` ${styles.infoBox} 
                    ${
                      active &&
-                     ((isBlue && styles.infoBox__blue) ||
-                       (isGreen && styles.infoBox__green) ||
-                       (isRed && styles.infoBox__red))
+                     ((isBlue && styles.border__blue) ||
+                       (isGreen && styles.border__green) ||
+                       (isRed && styles.border__red))
                    }`}
     >
       <CardActionArea>
@@ -40,7 +40,7 @@ function InfoBox({
           <h2
             className={`${
               (isBlue && styles.blue) ||
-              (isGreen && styles.green) ||
+              (isGreen && styles.green) || 
               (isRed && styles.red)
             }`}
           >

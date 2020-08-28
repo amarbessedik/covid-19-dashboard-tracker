@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import styles from './ScrollTop.module.css'
 
